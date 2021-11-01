@@ -1,0 +1,414 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/../fonts/Gilroy-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/../fonts/Gilroy-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/../fonts/Gilroy-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/../fonts/Gilroy-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/../fonts/Gilroy-Extrabold.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SofiaPro";
+  src: url("../fonts/../fonts/SofiaPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SofiaPro";
+  src: url("../fonts/../fonts/SofiaPro-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font: 400 18px/30px "SofiaPro", sans-serif;
+  background-color: #fff;
+  color: #5f6672;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site-container {
+  overflow: hidden;
+}
+
+.for-mobile {
+  display: none;
+}
+@media (max-width: 576px) {
+  .for-mobile {
+    display: block;
+  }
+}
+
+.dis-scroll {
+  overflow-y: hidden;
+}
+
+.list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.text {
+  margin: 0;
+}
+.text--main {
+  color: rgba(35, 53, 6, 0.65);
+}
+.text--footer {
+  color: rgba(55, 84, 101, 0.8);
+}
+.text--copyright {
+  color: rgba(55, 84, 101, 0.8);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 30px;
+}
+@media (max-width: 576px) {
+  .grid {
+    grid-gap: 20px;
+  }
+}
+
+.title {
+  margin: 0;
+}
+.title--hero {
+  font: 800 84px/100px "Gilroy", sans-serif;
+  color: #233506;
+}
+@media (max-width: 768px) {
+  .title--hero {
+    font: 700 70px/82px "Gilroy", sans-serif;
+  }
+}
+@media (max-width: 576px) {
+  .title--hero {
+    font: 800 60px/70px "Gilroy", sans-serif;
+  }
+}
+.title--hero-orange {
+  color: #fdb827;
+}
+@media (max-width: 768px) {
+  .title--hero-orange {
+    background-color: #fff9f2;
+    padding: 10px 10px 10px 0;
+    border-radius: 10px;
+  }
+}
+.title--main {
+  font: 700 70px/82px "Gilroy", sans-serif;
+  color: #02283f;
+}
+@media (max-width: 768px) {
+  .title--main {
+    font: 700 50px/62px "Gilroy", sans-serif;
+  }
+}
+.title--card {
+  font: 600 20px/23px "Gilroy", sans-serif;
+  color: #02283f;
+}
+@media (max-width: 768px) {
+  .title--card {
+    font: 600 16px/21px "Gilroy", sans-serif;
+  }
+}
+.title--footer {
+  font: 700 18px/21px "Gilroy", sans-serif;
+  color: #243165;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 0;
+  background-color: #fff;
+  color: #000;
+  border: none;
+}
+.btn--light {
+  padding: 20px 23px;
+  font: 500 18px/20px "Gilroy", sans-serif;
+  color: #ff800b;
+  border-radius: 22px;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #fff;
+}
+@media (min-width: 1025px) {
+  .btn--light:hover {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+}
+@media (max-width: 576px) {
+  .btn--light {
+    padding: 7px;
+    border-radius: 15px;
+    height: 42px;
+  }
+}
+@media (max-width: 400px) {
+  .btn--light {
+    font: 600 12px/14px "Gilroy", sans-serif;
+  }
+}
+.btn--light-icons {
+  padding: 15px;
+  border-radius: 15px;
+  border: 2px solid #fff;
+  transition: all 0.2s ease-in-out;
+}
+.btn--light-icons svg {
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  top: 0;
+  width: 20px;
+}
+@media (min-width: 1025px) {
+  .btn--light-icons:hover svg {
+    position: relative;
+    top: -5px;
+  }
+}
+@media (max-width: 576px) {
+  .btn--light-icons {
+    padding: 7px;
+    border-radius: 50%;
+  }
+  .btn--light-icons svg {
+    width: 15px;
+  }
+}
+.btn--burger {
+  padding: 10px;
+  border-radius: 15px;
+  border: 2px solid #fff;
+  transition: all 0.2s ease-in-out;
+  display: none;
+}
+@media (max-width: 1024px) {
+  .btn--burger {
+    display: block;
+  }
+}
+@media (max-width: 400px) {
+  .btn--burger {
+    padding: 5px;
+    border-radius: 50%;
+  }
+}
+.btn--burger svg {
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  top: 0;
+  width: 30px;
+  fill: #ff800b;
+}
+@media (min-width: 1025px) {
+  .btn--burger:hover svg {
+    position: relative;
+    top: -5px;
+  }
+}
+.btn--orange {
+  background-color: #fdb827;
+  color: #fff;
+  padding: 29px 40px;
+  font: 500 18px/18px "SofiaPro", sans-serif;
+  border-radius: 33px;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #fdb827;
+}
+.btn--orange svg {
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  top: 2px;
+  left: 0;
+}
+.btn--orange svg path {
+  transition: all 0.2s ease-in-out;
+  fill: #fff;
+}
+@media (min-width: 1025px) {
+  .btn--orange:hover {
+    background-color: transparent;
+    color: #fdb827;
+    border: 2px solid #fdb827;
+  }
+  .btn--orange:hover svg {
+    position: relative;
+    left: 10px;
+  }
+  .btn--orange:hover svg path {
+    transition: all 0.2s ease-in-out;
+    fill: #fdb827;
+  }
+}
+@media (max-width: 576px) {
+  .btn--orange {
+    color: #fdb827;
+    background-color: #fff9f2;
+  }
+  .btn--orange svg path {
+    fill: #fdb827;
+  }
+}
+.btn--buy {
+  padding: 13px 37px;
+  background-color: #fdb827;
+  border-radius: 8px;
+  color: #02283f;
+  font: 400 18px/21px "Gilroy", sans-serif;
+  border: 1px solid #fdb827;
+  transition: all 0.2s ease-in-out;
+}
+.btn--buy-incart {
+  background-color: transparent;
+  color: #fdb827;
+}
+@media (min-width: 1025px) {
+  .btn--buy:hover {
+    background-color: transparent;
+    color: #fdb827;
+  }
+}
+.btn--close {
+  padding: 10px;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  border-radius: 50%;
+}
+@media (min-width: 1025px) {
+  .btn--close:hover {
+    transform: rotate(180deg);
+  }
+}
+.btn--close::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../images/sprite.svg#close);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.btn--del {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 2px solid #375465;
+  border-radius: 5px;
+}
+@media (min-width: 1025px) {
+  .btn--del:hover::before {
+    top: 45%;
+  }
+}
+@media (max-width: 768px) {
+  .btn--del {
+    width: 20px;
+    height: 20px;
+    border: none;
+  }
+}
+.btn--del::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../images/sprite.svg#del);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.1s ease-in-out;
+}
+.btn--calculator {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 2px solid #02283f;
+  border-radius: 5px;
+  font: 600 20px/23px "Gilroy", sans-serif;
+  color: #02283f;
+  transition: all 0.2s ease-in-out;
+  margin: 0 5px;
+}
+@media (min-width: 1025px) {
+  .btn--calculator:hover {
+    background-color: #02283f;
+    color: #fff;
+  }
+}
+@media (max-width: 768px) {
+  .btn--calculator {
+    width: 25px;
+    height: 25px;
+  }
+}
