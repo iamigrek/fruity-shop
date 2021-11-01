@@ -1,0 +1,343 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font: $fs-main;
+  background-color: $white;
+  color: $shuttle;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site-container {
+  overflow: hidden;
+}
+
+.for-mobile {
+  display: none;
+  @include mobile {
+    display: block;
+  }
+}
+
+.dis-scroll {
+  overflow-y: hidden;
+}
+
+.list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.text {
+  margin: 0;
+  &--main {
+    color: rgba($color: $pine, $alpha: 0.65);
+  }
+  &--footer {
+    color: rgba($color: $pickled, $alpha: 0.8);
+  }
+  &--copyright {
+    color: rgba($color: $pickled, $alpha: 0.8);
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 30px;
+  @include mobile {
+    grid-gap: 20px;
+  }
+}
+
+.title {
+  margin: 0;
+  &--hero {
+    font: $fs-title-hero;
+    color: $pine;
+    @include small-tablet {
+      font: $fs-main-title;
+    }
+    @include mobile {
+      font: $fs-title-hero-ad;
+    }
+    &-orange {
+      color: $sin;
+      @include small-tablet {
+        background-color: $bridal;
+        padding: 10px 10px 10px 0;
+        border-radius: 10px;
+      }
+    }
+  }
+  &--main {
+    font: $fs-main-title;
+    color: $daintree;
+    @include small-tablet {
+      font: $fs-main-title-ad;
+    }
+  }
+  &--card {
+    font: $fs-main-subtitle;
+    color: $daintree;
+    @include small-tablet {
+      font: $fs-price-ad;
+    }
+  }
+  &--footer {
+    font: $fs-footer-title;
+    color: $cloud;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  padding: 0;
+  background-color: $white;
+  color: $black;
+  border: none;
+  &--light {
+    padding: 20px 23px;
+    font: $fs-menu;
+    color: $flamenco;
+    border-radius: 22px;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid $white;
+    @include desktop {
+      &:hover {
+        background-color: $transparent;
+        color: $white;
+        border: 2px solid $white;
+      }
+    }
+    @include mobile {
+      padding: 7px;
+      border-radius: 15px;
+      height: 42px;
+    }
+    @include small-mobile {
+      font: $fs-weight;
+    }
+  }
+  &--light-icons {
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid $white;
+    transition: all 0.2s ease-in-out;
+    svg {
+      transition: all 0.2s ease-in-out;
+      position: relative;
+      top: 0;
+      width: 20px;
+    }
+    @include desktop {
+      &:hover {
+        svg {
+          position: relative;
+          top: -5px;
+        }
+      }
+    }
+    @include mobile {
+      padding: 7px;
+      border-radius: 50%;
+      svg {
+        width: 15px;
+      }
+    }
+  }
+  &--burger {
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid $white;
+    transition: all 0.2s ease-in-out;
+    display: none;
+    @include tablet {
+      display: block;
+    }
+    @include small-mobile {
+      padding: 5px;
+      border-radius: 50%;
+    }
+    svg {
+      transition: all 0.2s ease-in-out;
+      position: relative;
+      top: 0;
+      width: 30px;
+      fill: $flamenco;
+    }
+    @include desktop {
+      &:hover {
+        svg {
+          position: relative;
+          top: -5px;
+        }
+      }
+    }
+  }
+  &--orange {
+    background-color: $sin;
+    color: $white;
+    padding: 29px 40px;
+    font: $fs-main-btn;
+    border-radius: 33px;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid $sin;
+    svg {
+      transition: all 0.2s ease-in-out;
+      position: relative;
+      top: 2px;
+      left: 0;
+      path {
+        transition: all 0.2s ease-in-out;
+        fill: $white;
+      }
+    }
+    @include desktop {
+      &:hover {
+        background-color: $transparent;
+        color: $sin;
+        border: 2px solid $sin;
+        svg {
+          position: relative;
+          left: 10px;
+          path {
+            transition: all 0.2s ease-in-out;
+            fill: $sin;
+          }
+        }
+      }
+    }
+    @include mobile {
+      color: $sin;
+      background-color: $bridal;
+      svg {
+        path {
+          fill: $sin;
+        }
+      }
+    }
+  }
+  &--buy {
+    padding: 13px 37px;
+    background-color: $sin;
+    border-radius: 8px;
+    color: $daintree;
+    font: $fs-buy;
+    border: 1px solid $sin;
+    transition: all 0.2s ease-in-out;
+    &-incart {
+      background-color: $transparent;
+      color: $sin;
+    }
+    @include desktop {
+      &:hover {
+        background-color: $transparent;
+        color: $sin;
+      }
+    }
+  }
+  &--close {
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    border-radius: 50%;
+    @include desktop {
+      &:hover {
+        transform: rotate(180deg);
+      }
+    }
+    &::before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url(../images/sprite.svg#close);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  &--del {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 2px solid $pickled;
+    border-radius: 5px;
+    @include desktop {
+      &:hover {
+        &::before {
+          top: 45%;
+        }
+      }
+    }
+    @include small-tablet {
+      width: 20px;
+      height: 20px;
+      border: none;
+    }
+    &::before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url(../images/sprite.svg#del);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: all 0.1s ease-in-out;
+    }
+  }
+  &--calculator {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 2px solid $daintree;
+    border-radius: 5px;
+    font: $fs-main-subtitle;
+    color: $daintree;
+    transition: all 0.2s ease-in-out;
+    margin: 0 5px;
+    @include desktop {
+      &:hover {
+        background-color: $daintree;
+        color: $white;
+      }
+    }
+    @include small-tablet {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}

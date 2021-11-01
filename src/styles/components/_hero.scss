@@ -1,0 +1,95 @@
+.hero {
+  background-color: $bridal;
+  position: relative;
+  margin-bottom: 150px;
+  @include small-tablet {
+    margin-bottom: 100px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 65%;
+    bottom: 0;
+    width: 100%;
+    background-color: $sin;
+    @include tablet {
+      left: 50%;
+    }
+    @include small-tablet {
+      left: 34%;
+    }
+    @include mobile {
+      left: 23%;
+    }
+    @include small-mobile {
+      left: 24%;
+    }
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -45%);
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/hero-1.png);
+    background-size: 55% auto;
+    background-position: right;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+  @include tablet {
+    &::before {
+      display: none;
+    }
+  }
+  &__container {
+    position: relative;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 280px 0 200px;
+    @include small-tablet {
+      padding: 180px 0 150px;
+    }
+  }
+  &__info {
+    max-width: 590px;
+    z-index: 1;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+    @include mobile {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+  }
+  &__desc {
+    margin-bottom: 50px;
+    max-width: 456px;
+    @include mobile {
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 25px;
+    }
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    @include mobile {
+      margin: 0 auto;
+    }
+    svg {
+      width: 20px;
+      margin-left: 20px;
+    }
+  }
+}
